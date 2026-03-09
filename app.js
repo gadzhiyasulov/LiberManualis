@@ -5,6 +5,7 @@ const searchInput = document.getElementById("searchInput");
 const filterSelect = document.getElementById("filterSelect");
 const stats = document.getElementById("stats");
 
+const dueDateInput = document.getElementById("dueDateInput");
 const totalCount = document.getElementById("totalCount");
 const completedCount = document.getElementById("completedCount");
 const activeCount = document.getElementById("activeCount");
