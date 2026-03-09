@@ -18,6 +18,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const text = input.value.trim();
+  const dueDate = dueDateInput.value;
 
   if (text === "") return;
 
@@ -25,6 +26,7 @@ form.addEventListener("submit", function (event) {
     id: Date.now(),
     text: text,
     completed: false
+    dueDate: dueDate
   };
 
   rules.push(newRule);
@@ -32,6 +34,7 @@ form.addEventListener("submit", function (event) {
   renderAll();
 
   input.value = "";
+  dueDateInput.value = "";
 });
 
 searchInput.addEventListener("input", function () {
