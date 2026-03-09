@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liber Manualis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Liber Manualis</h1>
+      <p class="subtitle">
+        Личный цифровой конспект: правила, дисциплина, контроль выполнения
+      </p>
+    </header>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <p class="summary-label">Всего задач</p>
+        <h3 id="totalCount">0</h3>
+      </div>
+
+      <div class="summary-card">
+        <p class="summary-label">Выполнено</p>
+        <h3 id="completedCount">0</h3>
+      </div>
+
+      <div class="summary-card">
+        <p class="summary-label">Активно</p>
+        <h3 id="activeCount">0</h3>
+      </div>
+    </section>
+
+    <section class="card intro-card">
+      <h2>О проекте</h2>
+      <p>
+        Liber Manualis - это учебный веб-проект для хранения личных правил,
+        дисциплины и небольших задач с возможностью отмечать их выполнение,
+        искать нужные пункты и сохранять данные в браузере.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Добавить задачу</h2>
+
+      <form id="ruleForm" class="form">
+        <input
+          id="ruleInput"
+          type="text"
+          placeholder="Например: Учусь 45 минут без телефона"
+        />
+        <button type="submit">Добавить</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Поиск и фильтр</h2>
+
+      <div class="controls">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Поиск по правилам"
+        />
+
+        <select id="filterSelect">
+          <option value="all">Все</option>
+          <option value="completed">Выполненные</option>
+          <option value="active">Невыполненные</option>
+        </select>
+      </div>
+
+      <p id="stats" class="stats">Выполнено: 0 из 0</p>
+    </section>
+
+    <section class="card">
+      <h2>Список правил</h2>
+      <ul id="ruleList" class="rule-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
