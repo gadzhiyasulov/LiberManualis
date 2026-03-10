@@ -209,6 +209,16 @@ button:hover {
   padding: 18px 0;
 }
 
+.rule-item.overdue {
+  border-left: 4px solid #dc2626;
+  padding-left: 12px;
+}
+
+.rule-item.soon {
+  border-left: 4px solid #f59e0b;
+  padding-left: 12px;
+}
+
 @media (max-width: 700px) {
   .summary-grid {
     grid-template-columns: 1fr;
@@ -229,6 +239,7 @@ button:hover {
     align-items: flex-start;
   }
 }
+
 
 @media (max-width: 480px) {
   .container {
@@ -259,14 +270,5 @@ button:hover {
   margin-left: 15px;
   color: #9aa3b2;
   font-size: 14px;
-  }
-  .rule-item.overdue {
-  border-left: 4px solid #dc2626;
-  padding-left: 12px;
-  }
-
-  .rule-item.soon {
-  border-left: 4px solid #f59e0b;
-  padding-left: 12px;
   }
 }

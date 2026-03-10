@@ -61,6 +61,21 @@ function renderAll() {
     if (filterValue === "active") {
       return matchesSearch && rule.completed === false;
     }
+    if (filterValue === "urgent") {
+
+      if (!rule.dueDate) return false;
+
+      const today = new Date();
+      const deadline = new Date(rule.dueDate);
+
+      today.setHours(0,0,0,0);
+      deadline.setHours(0,0,0,0);
+
+      const diff = deadline - today;
+      const daysLeft = diff / (1000 * 60 * 60 * 24);
+
+      return daysLeft <= 3 && daysLeft >= 0;
+    }
 
     return matchesSearch;
   });
