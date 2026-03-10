@@ -255,4 +255,9 @@ button:hover {
   .summary-card h3 {
     font-size: 26px;
   }
+  .rule-date {
+  margin-left: 15px;
+  color: #9aa3b2;
+  font-size: 14px;
+}
 }

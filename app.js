@@ -97,6 +97,10 @@ function renderRule(rule) {
   span.className = "rule-text";
   span.textContent = rule.text;
 
+  const dateSpan = document.createElement("span");
+  dateSpan.className = "rule-date";
+  dateSpan.textContent = rule.dueDate;
+
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "delete-btn";
   deleteBtn.textContent = "Удалить";
@@ -118,6 +122,7 @@ function renderRule(rule) {
 
   li.appendChild(checkbox);
   li.appendChild(span);
+  li.appendChild(dateSpan);
   li.appendChild(deleteBtn);
 
   list.appendChild(li);
