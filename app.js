@@ -28,7 +28,7 @@ form.addEventListener("submit", function (event) {
     completed: false,
     dueDate: dueDate
   };
-  
+
   console.log(newRule);
 
   rules.push(newRule);
