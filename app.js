@@ -128,7 +128,19 @@ function renderRule(rule) {
 
   const dateSpan = document.createElement("span");
   dateSpan.className = "rule-date";
-  dateSpan.textContent = rule.dueDate;
+
+  if (rule.dueDate) {
+    const deadline = new Date(rule.dueDate);
+
+    const formattedDate = deadline.toLocaleDateString("ru-RU", {
+      day: "numeric",
+      month: "short"
+    });
+
+    dateSpan.textContent = formattedDate;
+  } else {
+    dateSpan.textContent = "";
+  }
 
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "delete-btn";
