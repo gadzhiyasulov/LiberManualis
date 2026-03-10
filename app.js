@@ -25,7 +25,7 @@ form.addEventListener("submit", function (event) {
   const newRule = {
     id: Date.now(),
     text: text,
-    completed: false
+    completed: false,
     dueDate: dueDate
   };
   
