@@ -82,6 +82,22 @@ function renderAll() {
 function renderRule(rule) {
   const li = document.createElement("li");
   li.className = "rule-item";
+  if (rule.dueDate) {
+  const today = new Date();
+  const deadline = new Date(rule.dueDate);
+
+  today.setHours(0, 0, 0, 0);
+  deadline.setHours(0, 0, 0, 0);
+
+  const diff = deadline - today;
+  const daysLeft = diff / (1000 * 60 * 60 * 24);
+
+  if (daysLeft < 0) {
+    li.classList.add("overdue");
+  } else if (daysLeft <= 3) {
+    li.classList.add("soon");
+  }
+}
 
   if (rule.completed) {
     li.classList.add("completed");
